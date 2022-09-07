@@ -1,0 +1,295 @@
+header{
+    background-color: #3D0000;
+    border: 3px solid black;
+    font-family: Myfont;
+    text-align: center;
+    vertical-align:middle;
+    position: relative;
+}
+main{
+    height: 60vh;
+    width: 99.8%;
+    background-color: #3D0000;
+    border: 3px solid black;
+    position: relative;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+footer{
+    height: 17vh;
+    background-color: #3D0000;
+    border: 3px solid black;
+    width: 99.8%;
+    position: relative;
+}
+
+@font-face {
+    font-family: Myfont;
+    src: url(../../fonts/LucidaUnicodeCalligraphy.ttf);
+}
+
+h1{
+    height:100%;
+    margin-top: auto;
+    position: absolute;
+    top:35%;
+    left: 45%;
+    color: #f1f1f1;
+}
+
+h3{
+    height:100%;
+    margin-top: auto;
+    position: absolute;
+    top:35%;
+    left: 37%;
+    font-family: Myfont;
+    color: #f1f1f1;
+}
+
+.photoContainer{
+    position: absolute;
+    left: 37%;
+    top:0;
+    border: black solid 3px;
+    cursor: pointer;
+    height: 89%;
+    width: 28%;
+}
+
+.photos{
+    display: none;
+    height: 100%;
+    width: 100%;
+}
+
+#photo1{
+    display: block;
+}
+
+.blackScreen{
+    display: none;
+    z-index: 1;
+    left: 0;
+    top: -32%;
+    width: 100%;
+    height: 163%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: rgb(235, 16, 100);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.blackScreenPhotos{
+    z-index: 30;
+    position: absolute;
+    top:5%;
+    height:70%;
+    display: none;
+    left:0;
+}
+
+.blackScreenContent{
+    position: relative;
+    padding: 0;
+    width: 30%;
+    top: 10%;
+    left: 31%;
+    z-index: 40;
+    height:90%;
+}
+
+.blackPrev,
+.blackNext {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  z-index: 30;
+  background-color: black;
+  color: white;
+}
+
+.blackNext {
+  right:-45%;
+  border-radius: 3px 0 0 3px;
+  z-index: 89979869;
+}
+.blackPrev{
+    left: -16%;
+    border-radius: 3px 0 0 3px;
+    z-index: 89979869;
+
+}
+
+.blackNext:hover {
+  background-color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.blackPrev:hover {
+    background-color: red;
+      text-decoration: none;
+      cursor: pointer;
+  }
+
+.cursor{
+    cursor: pointer;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 33%;
+    width: 40px;
+    height: 10%;
+    font-weight: bold;
+    font-size: 15px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+
+.next {
+    right: 45%;
+    top: 90.5%;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev{
+    top: 90.5%;
+    left: 45%;
+    border-radius: 3px 0 0 3px ;
+}
+  
+.prev:hover, .next:hover {
+    background-color: red;
+}
+
+li{
+    display:inline;
+    width: 35vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: myFont;
+}
+
+ul{
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav{
+    width: 99.8%;
+    display: block;
+    position: relative;
+    background: #3D0000;
+    z-index: 1;
+    top: 6vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.background{
+    background-image: url("../../mainPagephotos/Untitled-1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:100% 100% ;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: 100%;
+    height: 17vh;
+    position: absolute;
+}
+
+.header{
+    position: relative; 
+    top: 0;
+    left:0;
+    background-color: #3D0000;
+    height: 17vh;
+    width: 99.8%;
+    font-family: MyFont;  
+    border: 3px solid #000000; 
+    z-index: 1;
+    align-self: center;
+
+}
+
+#nav {
+    list-style: none inside;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: myFont;
+
+}
+
+#nav li {
+    display: inline-block;
+    position: relative;
+    background: #3D0000;
+    z-index: 1;
+    font-family: myFont;
+}
+
+#nav li a {
+    display: inline-block;
+    padding: 0;
+    text-decoration: none;
+    width: 100%;
+    line-height: 200%;
+    color: #ffffff;
+    z-index: 1;
+}
+
+#nav li:hover {
+    background: #FF0000;
+}
+
+
+#nav ul {
+    position: absolute;
+    padding: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+
+}
+
+#nav li:hover ul {
+    display: block;
+}
+
+audio{
+    vertical-align: middle;
+    position: absolute;
+    top: 28%;
+    left: 40.5%;
+}

@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="newsStyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>    <title>Document</title>
+</head>
+<body>
+  <header class="header" id="fixedHeader"> 
+    <div class="background"></div>
+    <nav>
+        <ul id="nav">
+            <li>
+                <a href="../main.html">Home</a>
+            </li>
+            <li>
+                <a href="#">Genres </a>
+                <ul>
+                    <li><a href="#">Alternative</a></li>
+                    <li><a href="#">Folk</a></li>
+                    <li><a href="#">Punk</a></li>
+                    <li><a href="#">Progressive</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Latest News</a>
+            </li>
+            <li>
+                <a href="#">Gallery</a>
+                <ul>
+                    <li><a href="../Gallerypage/photos/galleryPhotos.html">Photos</a></li>
+                    <li><a href="../Gallerypage/video/video.html">Videos</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Shop</a>
+            </li>
+        </ul>
+    </nav>
+    <div class="menuMobile" onclick="myFunction(this) , showMenuMobile()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>    
+    <div class="sidenav" id="sidenav" style="display: none;">
+            <a href="#about">Home</a>
+            <button class="dropdown-btn">Genres 
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Alternative</a>
+              <a href="#">Folk</a>
+              <a href="#">Punk</a>
+              <a href="#">Progressive</a>
+            </div>
+            <button class="dropdown-btn">Gallery 
+                <i class="fa fa-caret-down"></i>
+              </button>
+              <div class="dropdown-container">
+                <a href="#">Photos</a>
+                <a href="#">Videos</a>
+              </div>
+            <a href="#clients">Latest News</a>                
+            <a href="#contact">Shop</a>
+    </div>              
+</header>
+    <main>  
+        <div class="container-fluid text-light">
+            <div class="row justify-content-md-center">
+                <div class="col col-md-auto">Choose a Date:</div>
+                <div class="dropdown col col-md-auto"> 
+                    <select class="form-select bg-dark border-dark text-light" id="yearSelect" aria-label="Default select example">
+                        <option selected>Year</option>
+                        <option value="2022" class="year">2022</option>
+                        <option value="2021" class="year">2021</option>
+                        <option value="2020" class="year">2020</option>
+                        <option value="2019" class="year">2019</option>
+                        <option value="2018" class="year">2018</option>
+                        <option value="2017" class="year">2017</option>
+                        <option value="2016" class="year">2016</option>
+                        <option value="2015" class="year">2015</option>
+                      </select>
+                </div>
+                <div class="dropdown col col-md-auto">
+                    <select class="form-select bg-dark border-dark text-light" id="monthSelect" aria-label="Default select example">
+                        <option selected>Month</option>
+                        <option value="January" class="month">January</option>
+                        <option value="February" class="month">February</option>
+                        <option value="March" class="month">March</option>
+                        <option value="April" class="month">April</option>
+                        <option value="May" class="month">May</option>
+                        <option value="June" class="month">June</option>
+                        <option value="July" class="month">July</option>
+                        <option value="August" class="month">August</option>
+                        <option value="September" class="month">September</option>
+                        <option value="October" class="month">October</option>
+                        <option value="November" class="month">November</option>
+                        <option value="December" class="month">December</option>
+
+                      </select>
+                </div>
+                <div class="dropdown col col-md-auto">
+                    <select class="form-select bg-dark border-dark text-light" id="daySelect" aria-label="Default select example">
+                        <option selected>Day</option>
+                        <option value="1" class="day">1</option>
+                        <option value="2" class="day">2</option>
+                        <option value="3" class="day">3</option>
+                        <option value="4" class="day">4</option>
+                        <option value="5" class="day">5</option>
+                        <option value="6" class="day">6</option>
+                        <option value="7" class="day">7</option>
+                        <option value="8" class="day">8</option>
+                        <option value="9" class="day">9</option>
+                        <option value="10" class="day">10</option>
+                        <option value="11" class="day">11</option>
+                        <option value="12" class="day">12</option>
+                        <option value="13" class="day">13</option>
+                        <option value="14" class="day">14</option>
+                        <option value="15" class="day">15</option>
+                        <option value="16" class="day">16</option>
+                        <option value="17" class="day">17</option>
+                        <option value="18" class="day">18</option>
+                        <option value="19" class="day">19</option>
+                        <option value="20" class="day">20</option>
+                        <option value="21" class="day">21</option>
+                        <option value="22" class="day">22</option>
+                        <option value="23" class="day">23</option>
+                        <option value="24" class="day">24</option>
+                        <option value="25" class="day">25</option>
+                        <option value="26" class="day">26</option>
+                        <option value="27" class="day">27</option>
+                        <option value="28" class="day">28</option>
+                        <option value="29" class="day">29</option>
+                        <option value="30" class="day">30</option>
+                        <option value="31" class="day">31</option>
+                    </select>
+                </div>
+                <div class="dropdown col col-md-auto" onclick="showNews()">
+                    <button class="btn btn-dark">
+                        confirm
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="cardContainer1">
+            <div class="row">
+                <div class="col col-md-12 mh-50">
+                    <div class="card">
+                        <div class="row text-light">
+                          <div class="col cardCol">
+                            <img src="newsPhotos/grammys.jpg" class="card-img">
+                          </div>
+                          <div class="col cardCol">
+                            <div class="card-body">
+                                <h4 class="card-title">Foo Fighters Won Grammys</h4>
+                                <p class="card-text">Foo Fighters won the biggest rock awards for “Waiting on a War” 
+                                    and Best Rock Performance for "Making a Fire."
+                                </p>
+                            </div>
+                          </div>
+                          <div class="col col-md-1 cardCol">
+                            <p class="card-text">
+                                <div>2022</div>
+                                <div>April</div>
+                                <div>3</div>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-12">
+                    <div class="card cardCol">
+                        <div class="row text-light">
+                          <div class="col cardCol">
+                            <img src="newsPhotos/jimmy-page-ozzy.jpg" class="card-img" alt="...">
+                          </div>
+                          <div class="col cardCol">
+                            <div class="card-body">
+                              <h4 class="card-title">Ozzy tried to get Page on new album</h4>
+                              <p class="card-text">
+                                the team working on Ozzy Osbourne’s
+                                next album unsuccessfully tried to recruit Jimmy Page for the project.       
+                              </p>
+                            </div>
+                            </div>
+                            <div class="col col-md-1 cardCol">
+                                <p class="card-text">
+                                    <div>2022</div>
+                                    <div>April</div>
+                                    <div>3</div>
+                                </p>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col col-md-12">
+                    <div class="card">
+                        <div class="row text-light">
+                          <div class="col cardCol">
+                            <img src="newsPhotos/bon-jovi.jpg" class="card-img">
+                          </div>
+                          <div class="col cardCol">
+                            <div class="card-body">
+                              <h5 class="card-title">Bon Jovi Launch 2022 North American Tour</h5>
+                              <p class="card-text">
+                                Bon Jovi kicked of their 2022 North American tour with a performance last night.
+                              </p>
+                            </div>
+                          </div>
+                          <div class="col col-md-1 cardCol">
+                            <p class="card-text">
+                                <div>2022</div>
+                                <div>April</div>
+                                <div>3</div>
+                            </p>
+                        </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col col-md-12">
+                    <div class="card">
+                        <div class="row text-light">
+                          <div class="col cardCol">
+                            <img src="newsPhotos/rolling-stones.jpg" class="card-img">
+                          </div>
+                          <div class="col cardCol">
+                            <div class="card-body">
+                                <h5 class="card-title">Rolling Stones Documantary Series Confirmed</h5>
+                                <p class="card-text">
+                                    the BBC announced four hour-long documentaries  will air later this year.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="col col-md-1 cardCol">
+                            <p class="card-text">
+                                <div>2022</div>
+                                <div>April</div>
+                                <div>3</div>
+                            </p>
+                        </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="cardContainer2">
+            <div class="row">
+                <div class="col col-md-12 mh-50">
+                    <div class="card">
+                        <div class="row text-light">
+                          <div class="col cardCol">
+                            <img src="newsPhotos/pretty-reckless.jpg" class="card-img">
+                          </div>
+                          <div class="col cardCol">
+                            <div class="card-body">
+                                <h5 class="card-title">The Pretty Reckless released Death by Rock and Roll</h5>
+                                <p class="card-text">
+                                    the album topped the Billboard Top Album Sales chart,
+                                     making it the best album of the week in terms of pure sales
+                                </p>
+                            </div>
+                          </div>
+                          <div class="col col-md-1 cardCol">
+                            <p class="card-text">
+                                <div>2021</div>
+                                <div>February</div>
+                                <div>16</div>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-12">
+                    <div class="card cardCol">
+                        <div class="row text-light">
+                          <div class="col cardCol">
+                            <img src="newsPhotos/manson.jpg" class="card-img" alt="...">
+                          </div>
+                          <div class="col cardCol">
+                            <div class="card-body">
+                              <h5 class="card-title">Marilyn Manson is accused of sexual abuse</h5>
+                              <p class="card-text">
+                                Marilyn Manson is accused of sexual abuse by Evan Rachel Wood,
+                                leading to him being dropped from his record label.      
+                              </p>
+                            </div>
+                            </div>
+                            <div class="col col-md-1 cardCol">
+                                <p class="card-text">
+                                    <div>2021</div>
+                                    <div>February</div>
+                                    <div>16</div>
+                                </p>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col col-md-12">
+                    <div class="card">
+                        <div class="row text-light">
+                          <div class="col cardCol">
+                            <img src="newsPhotos/architects.jpg" class="card-img">
+                          </div>
+                          <div class="col cardCol">
+                            <div class="card-body">
+                              <h5 class="card-title">Architects releases their ninth studio album</h5>
+                              <p class="card-text">
+                                British band Architects releases their ninth studio album, For Those That Wish To Exist.
+                                It tops the UK and Australian album charts.
+                              </p>
+                            </div>
+                          </div>
+                          <div class="col col-md-1 cardCol">
+                            <p class="card-text">
+                                <div>2021</div>
+                                <div>February</div>
+                                <div>16</div>
+                            </p>
+                        </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col col-md-12">
+                    <div class="card">
+                        <div class="row text-light">
+                          <div class="col cardCol">
+                            <img src="newsPhotos/green-day.jpg" class="card-img">
+                          </div>
+                          <div class="col cardCol">
+                            <div class="card-body">
+                                <h5 class="card-title">Green Day performs live at Super Bowl</h5>
+                                <p class="card-text">
+                                    Green Day performs live at the NFL Honors event to open up the Super Bowl 2021 weekend.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="col col-md-1 cardCol">
+                            <p class="card-text">
+                                <div>2021</div>
+                                <div>February</div>
+                                <div>16</div>
+                            </p>
+                        </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid" id="cardContainer3">
+            <div class="row">
+                <div class="col col-md-12 mh-50">
+                    <div class="card">
+                        <div class="row text-light">
+                          <div class="col cardCol">
+                            <img src="newsPhotos/tool.jpg" class="card-img">
+                          </div>
+                          <div class="col cardCol">
+                            <div class="card-body">
+                                <h5 class="card-title">Tool releases their first album in 13 years, Fear Inoculum.</h5>
+                                <p class="card-text">
+                                    Fear Inoculum holds into the top 10 of the Billboard 200
+                                    in its second week, charting at number 7 and moving another 38,000 album equivalent units.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="col col-md-1 cardCol">
+                            <p class="card-text">
+                                <div>2019</div>
+                                <div>August</div>
+                                <div>23</div>
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-md-12">
+                    <div class="card cardCol">
+                        <div class="row text-light">
+                          <div class="col cardCol">
+                            <img src="newsPhotos/blink-182.jpg" class="card-img" alt="...">
+                          </div>
+                          <div class="col cardCol">
+                            <div class="card-body">
+                              <h5 class="card-title">Blink 182 releases their ninth studio album, Nine.</h5>
+                              <p class="card-text">
+                                Blink 182 releases their ninth studio album, Nine.
+                                It debuts at number 3 on the Billboard 200, moving 94,000 album equivalent units.    
+                              </p>
+                            </div>
+                            </div>
+                            <div class="col col-md-1 cardCol">
+                                <p class="card-text">
+                                    <div>2019</div>
+                                    <div>August</div>
+                                    <div>23</div>
+                                </p>
+                            </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col col-md-12">
+                    <div class="card">
+                        <div class="row text-light">
+                          <div class="col cardCol">
+                            <img src="newsPhotos/beatles.jpg" class="card-img">
+                          </div>
+                          <div class="col cardCol">
+                            <div class="card-body">
+                              <h5 class="card-title">The Beatles' album Abbey Road is remixed and released</h5>
+                              <p class="card-text">
+                                The Beatles' album Abbey Road is remixed and released, topping the charts in UK once again.
+                              </p>
+                            </div>
+                          </div>
+                          <div class="col col-md-1 cardCol">
+                            <p class="card-text">
+                                <div>2019</div>
+                                <div>August</div>
+                                <div>23</div>
+                            </p>
+                        </div>
+                        </div>
+                      </div>
+                </div>
+                <div class="col col-md-12">
+                    <div class="card">
+                        <div class="row text-light">
+                          <div class="col cardCol">
+                            <img src="newsPhotos/disturbed.jpg" class="card-img">
+                          </div>
+                          <div class="col cardCol">
+                            <div class="card-body">
+                                <h5 class="card-title">Disturbed's "No More" tops the Mainstream Rock chart</h5>
+                                <p class="card-text">
+                                    Disturbed's single "No More" tops the Mainstream Rock chart,
+                                    the band's seventh single in a row to top the chart. It stays there for four weeks.
+                                </p>
+                            </div>
+                          </div>
+                          <div class="col col-md-1 cardCol">
+                            <p class="card-text">
+                                <div>2019</div>
+                                <div>August</div>
+                                <div>23</div>
+                            </p>
+                        </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="text-light align-middle text-center">
+        this is a shitty footer with no use:)
+    </footer>
+
+
+    <script>
+        function showNews(){
+            let yearSelect= document.getElementById("yearSelect");
+            let yearValue = yearSelect.options[yearSelect.selectedIndex].value;
+            let monthSelect= document.getElementById("monthSelect");
+            let monthValue = monthSelect.options[monthSelect.selectedIndex].value; 
+            let daySelect= document.getElementById("daySelect");
+            let dayValue = daySelect.options[daySelect.selectedIndex].value;
+            let yearindex= 0;
+            let monthindex=0;
+            let dayindex=0;
+            let years= document.getElementsByClassName("year");
+            let months= document.getElementsByClassName("month");
+            let days=document.getElementsByClassName("day");
+            let page1=document.getElementById("cardContainer1")
+            let page2=document.getElementById("cardContainer2")
+            let page3=document.getElementById("cardContainer3")
+            console.log(yearValue);
+            console.log(years[3].textContent);
+            console.log(years.length);
+            console.log(months.length);
+            console.log(days.length);
+            for(let i=0; i<8; i++){
+                if(yearValue==years[i].textContent){
+                    yearindex=i;
+                    break;
+                }
+            }
+            for(let i=0; i<12; i++){
+                if(monthValue==months[i].textContent){
+                    monthindex=i;
+                    break;
+                }
+            }
+            console.log(monthindex);
+            for(let i=0; i<31; i++){
+                if(dayValue==days[i].textContent){
+                    dayindex=i;
+                    break;
+                }
+            }
+            console.log(dayindex);
+            if(yearindex==0 && monthindex==3 && dayindex==2){
+                page2.style.display="none";
+                page1.style.display="block";
+                page3.style.display="none"
+            }
+            if(yearindex==1 && monthindex==1 && dayindex==15){
+                page1.style.display="none";
+                page2.style.display="block";
+                page3.style.display="none"
+            }
+            if(yearindex==3 && monthindex==7 && dayindex==22){
+                page1.style.display="none";
+                page3.style.display="block";
+                page2.style.display="none"
+            }
+        }
+    </script>
+</body>
+</html>

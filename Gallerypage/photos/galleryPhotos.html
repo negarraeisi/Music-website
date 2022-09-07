@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="galleryPhotos.css" />
+    <title>Photo Gallery</title>
+</head>
+<body>
+    <header class="header">
+        <div class="background"></div>
+        <nav>
+            <ul id="nav">
+                <li>
+                    <a href="../../main.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">Genres </a>
+                    <ul>
+                        <li><a href="#">Alternative</a></li>
+                        <li><a href="#">Folk</a></li>
+                        <li><a href="#">Punk</a></li>
+                        <li><a href="#">Progressive</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="../../news/news.html">Latest News</a>
+                </li>
+                <li>
+                    <a href="#">Gallery</a>
+                    <ul>
+                        <li><a href="#">Photos</a></li>
+                        <li><a href="../video/video.html">Videos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Shop</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="blackScreen" id="black">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="blackScreenContent">
+                <button class="blackPrev" id="blackPrevButton" onclick="plusBSlides(-1)">&#10094;</button>
+                <button class="blackNext" id="blackNextButton" onclick="plusBSlides(1)">&#10095;</button>
+                <div class="blackScreenDiv">
+                    <img class="blackScreenPhotos" src="GalleryPhotos/1-1.jpg">
+                </div>
+                <div class="blackScreenDiv">
+                    <img class="blackScreenPhotos" src="GalleryPhotos/2-1.jpg">
+                </div>
+                <div class="blackScreenDiv">
+                    <img class="blackScreenPhotos" src="GalleryPhotos/3-1.jpg">
+                </div>
+                <div class="blackScreenDiv">
+                    <img class="blackScreenPhotos" src="GalleryPhotos/4-1.jpg">
+                </div>
+                <div class="blackScreenDiv">
+                    <img class="blackScreenPhotos" src="GalleryPhotos/5-1.jpg">
+                </div>
+                <div class="blackScreenDiv">
+                    <img class="blackScreenPhotos" src="GalleryPhotos/6-1.jpg">
+                </div>
+                <div class="blackScreenDiv">
+                    <img class="blackScreenPhotos" src="GalleryPhotos/7-1.jpg">
+                </div>
+                <div class="blackScreenDiv">
+                    <img class="blackScreenPhotos" src="GalleryPhotos/8-1.jpg">
+                </div>
+                <div class="blackScreenDiv">
+                    <img class="blackScreenPhotos" src="GalleryPhotos/9-1.jpg">
+                </div>
+                <div class="blackScreenDiv">
+                    <img class="blackScreenPhotos" src="GalleryPhotos/10-1.jpg">
+                </div>
+            </div>
+        </div>
+        
+        <div class="photoContainer"  onclick="showBlackScreen()">
+            <img class="photos" id="photo1" src="GalleryPhotos/1.jpg">
+            <img class="photos" id="photo2" src="GalleryPhotos/2.jpg">
+            <img class="photos" id="photo3" src="GalleryPhotos/3.jpg">
+            <img class="photos" id="photo4" src="GalleryPhotos/4.jpg">
+            <img class="photos" id="photo5" src="GalleryPhotos/5.jpg">
+            <img class="photos" id="photo6" src="GalleryPhotos/6.jpg">
+            <img class="photos" id="photo7" src="GalleryPhotos/7.jpg">
+            <img class="photos" id="photo8" src="GalleryPhotos/8.jpg">
+            <img class="photos" id="photo9" src="GalleryPhotos/9.jpg">
+            <img class="photos" id="photo10" src="GalleryPhotos/10.jpg">
+        </div>
+        <div>
+            <button class="prev disabled" id="prevButton" onclick="plusSlides(-1)" style="cursor: pointer;">&#10094;</button>
+            <button class="next disabled" id="nextButton" onclick="plusSlides(1)">&#10095;</button>
+        </div>
+    </main>
+    <footer>
+        <audio controls autoplay loop>
+            <source src="../../Music/35-Queen - The Show Must Go On.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>   
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("photos");
+            
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex-1].style.display = "block";  
+            let photo1=document.getElementById("photo1");
+            let photo10=document.getElementById("photo10");
+            let nextButton=document.getElementById("nextButton");
+            let prevButton=document.getElementById("prevButton");
+
+            console.log("kjkdsl");
+            console.log(photo1.style.display);
+            if(photo1.style.display=="block"){
+                console.log("kjkdsl");
+                console.log(prevButton.style.cursor);
+                document.getElementById("prevButton").disabled=true;
+                document.getElementById("prevButton").style.cursor="not-allowed";
+            }
+            else{
+                document.getElementById("prevButton").disabled=false;
+                document.getElementById("prevButton").style.cursor="pointer";
+
+            }
+            if(photo10.style.display=="block"){
+                console.log("kjkdsl");
+                document.getElementById("nextButton").disabled=true;
+                document.getElementById("nextButton").style.cursor="not-allowed";
+
+            }
+            else{
+                document.getElementById("nextButton").disabled=false;
+                document.getElementById("nextButton").style.cursor="pointer";
+            }
+        }
+
+        function showBlackScreen(){
+            var photos= window.document.getElementsByClassName("photos");
+            var blackScreen= window.document.getElementById("black");
+            var blackPhotos = window.document.getElementsByClassName("blackScreenPhotos");
+            var i=0;
+            var index=0;
+            blackScreen.style.display="block";
+            console.log(photos[0].style.display);
+            for(i=0;i<photos.length;i++){
+                if(photos[i].style.display=="block"){
+                    index=i;
+                    blackPhotos[i].style.display="none";
+                    console.log(i);
+                }
+            }
+            blackPhotos[index].style.display="block";
+            console.log(blackPhotos[0].style.display);
+            console.log(index);
+
+        }
+
+        function closeModal(){
+            var blackScreen= window.document.getElementById("black");
+            blackScreen.style.display="none";
+        }
+
+
+        var slideindex = 1;
+        showBSlides(slideindex);
+
+        function plusBSlides(n) {
+        showBSlides(slideindex += n);
+        }
+
+        function currentBSlide(n) {
+        showBSlides(slideindex = n);
+        }
+
+        function showBSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("blackScreenPhotos");
+        if (n > slides.length) {slideindex = 1}
+        if (n < 1) {slideindex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideindex-1].style.display = "block";
+
+        if(slides[9].style.display=="block"){
+            document.getElementById("blackNextButton").disabled=true;
+            document.getElementById("blackNextButton").style.cursor="not-allowed";
+        }
+        else{
+            document.getElementById("blackNextButton").disabled=false;
+            document.getElementById("blackNextButton").style.cursor="pointer";
+        }
+
+        if(slides[0].style.display=="block"){
+            document.getElementById("blackPrevButton").disabled=true;
+            document.getElementById("blackPrevButton").style.cursor="not-allowed";
+        }
+        else{
+            document.getElementById("blackPrevButton").disabled=false;
+            document.getElementById("blackPrevButton").style.cursor="pointer";
+        }
+        }
+       
+    </script>
+</body>
+</html>

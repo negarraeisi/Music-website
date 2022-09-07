@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>videos</title>
+    <link rel="stylesheet" href="video.css">
+</head>
+<body>
+    <header class="header">
+        <div class="background"></div>
+        <nav>
+            <ul id="nav">
+                <li>
+                    <a href="../../main.html">Home</a>
+                </li>
+                <li>
+                    <a href="#">Genres </a>
+                    <ul>
+                        <li><a href="#">Alternative</a></li>
+                        <li><a href="#">Folk</a></li>
+                        <li><a href="#">Punk</a></li>
+                        <li><a href="#">Progressive</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Latest News</a>
+                </li>
+                <li>
+                    <a href="#">Gallery</a>
+                    <ul>
+                        <li><a href="../photos/galleryPhotos.html">Photos</a></li>
+                        <li><a href="#">Videos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Shop</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <video controls onclick="showVid1()">
+            <source class="videos" src="Videos/1.mp4">
+        </video>
+        <video controls onclick="showVid2()">
+            <source class="videos" src="Videos/2.mp4">
+        </video>
+        <video controls onclick="showVid3()">
+            <source class="videos" src="Videos/3.mp4">
+        </video>
+
+        <div class="vContainer" id="video1Container">
+            <video class="blackVideos" controls>
+                <source src="Videos/1.mp4">
+            </video>
+            <span class="close cursor" onclick="closeBlack()">&times;</span>
+        </div>
+        <div class="vContainer" id="video2Container">
+            <video class="blackVideos" controls>
+                <source src="Videos/2.mp4">
+            </video>
+            <span class="close cursor" onclick="closeBlack()">&times;</span>
+        </div>
+        <div class="vContainer" id="video3Container">
+            <video class="blackVideos" controls>
+                <source src="Videos/3.mp4">
+            </video>
+            <span class="close cursor" onclick="closeBlack()">&times;</span>
+        </div>
+    </main>
+    <footer>
+        <audio controls autoplay loop>
+            <source src="../../Music/35-Queen - The Show Must Go On.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>   
+    </footer>
+
+    <script>
+        function showVid1(){
+            let blackScreen= document.getElementById("video1Container");
+            blackScreen.style.display="block"
+            console.log("kjsk");
+        }
+
+        function showVid2(){
+            let blackScreen= document.getElementById("video2Container");
+            blackScreen.style.display="block"
+        }
+
+        function showVid3(){
+            let blackScreen= document.getElementById("video3Container");
+            blackScreen.style.display="block"
+        }
+
+        function closeBlack(){
+            let black1=document.getElementById("video1Container");
+            let black2=document.getElementById("video2Container");
+            let black3=document.getElementById("video3Container");
+            if(black1.style.display=="block"){
+                black1.style.display="none";
+            }
+            else if(black2.style.display=="block"){
+                black2.style.display="none";
+            }
+            else if(black3.style.display=="block"){
+                black3.style.display="none";
+            }
+        }
+    </script>
+</body>
+</html>

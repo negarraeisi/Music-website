@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mainStyle.css" />
+    <link rel="stylesheet" href="mobile.css" />
+    <title>Music Website</title>
+</head>
+<body>
+    <header class="header" id="fixedHeader"> 
+        <div class="background"></div>
+        <nav>
+            <ul id="nav">
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Genres </a>
+                    <ul>
+                        <li><a href="#">Alternative</a></li>
+                        <li><a href="#">Folk</a></li>
+                        <li><a href="#">Punk</a></li>
+                        <li><a href="#">Progressive</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="news/news.html">Latest News</a>
+                </li>
+                <li>
+                    <a href="#">Gallery</a>
+                    <ul>
+                        <li><a href="Gallerypage/photos/galleryPhotos.html">Photos</a></li>
+                        <li><a href="Gallerypage/video/video.html">Videos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Shop</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="menuMobile" onclick="myFunction(this) , showMenuMobile()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>    
+        <div class="sidenav" id="sidenav" style="display: none;">
+                <a href="#about">Home</a>
+                <button class="dropdown-btn">Genres 
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-container">
+                  <a href="#">Alternative</a>
+                  <a href="#">Folk</a>
+                  <a href="#">Punk</a>
+                  <a href="#">Progressive</a>
+                </div>
+                <button class="dropdown-btn">Gallery 
+                    <i class="fa fa-caret-down"></i>
+                  </button>
+                  <div class="dropdown-container">
+                    <a href="#">Photos</a>
+                    <a href="#">Videos</a>
+                  </div>
+                <a href="#clients">Latest News</a>                
+                <a href="#contact">Shop</a>
+        </div>              
+    </header>
+    <main class="content">
+        <div id="slider">
+            <div class="news" id="first">
+                <div class="newsPhoto" id="fisrtPhoto">
+                    <img class="mobileHide" src="mainPagephotos/photo_2022-02-21_22-31-28.jpg">
+                    <img class="desktopHide" src="mainPagephotos/17.jpg">
+                </div>
+                <div class="newsText" id="firstNews">
+                    <h2>Kurt Cobain's Body Found dead!</h2>
+                </div>
+            </div>
+            <div class="news" id="second">
+                <div class="newsPhoto" id="secondPhoto">
+                    <img src="mainPagephotos/photo_2022-02-21_22-41-17.jpg">
+                </div>
+                <div class="newsText" id="secondNews">
+                    <h2>Syd Barret's Body found dead!</h2>
+                </div>
+            </div>
+            <div class="news" id="third">
+                <div class="newsPhoto" id="thirdPhoto">
+                    <img src="mainPagephotos/photo_2022-02-21_22-45-19.jpg">
+                </div>
+                <div class="newsText" id="thirdNews">
+                    <h2>Queen sold over 300 million records worldwide!</h2>
+                </div>
+            </div>
+            <div>
+                <span class="dot" id="dot1" style="background-color:red" onclick="currentSlide(1)"></span> 
+                <span class="dot" id="dot2" onclick="currentSlide(2)"></span> 
+                <span class="dot" id="dot3" onclick="currentSlide(3)"></span> 
+              </div>
+        </div>
+
+        <div class="square" id="square1">
+            <div class="squareText" id="squareText1">
+                <h2>Latest Albums</h2>
+            </div>
+            <div class="albumText" id="album1Text">
+                    <h3>Album1</h3>
+            </div>
+            <div class="albums" id="firstAlbum" style="display: grid">
+                <div class="square1Photos" id="square1Photo1">
+                    <img class="photos" src="mainPagePhotos/1.jpg">
+                </div>
+                <div class="square1Photos" id="square1Photo2">
+                    <img class="photos" src="mainPagePhotos/2.jpg">
+                </div>
+                <div class="square1Photos" id="square1Photo3">
+                    <img class="photos"src="mainPagePhotos/3.jpg">
+                </div>
+                <div class="square1Photos" id="square1Photo4">
+                    <img class="photos" src="mainPagePhotos/4.jpg">
+                </div>
+            </div>
+            <div class="albums" id="secondAlbum" style="display: none;">
+                <div class="albumText" id="album2Text">
+                    <h3>Album2</h3>
+                </div>
+                <div class="square1Photos" id="square1Photo5">
+                    <img class="photos" src="mainPagePhotos/9.jpg">
+                </div>
+                <div class="square1Photos" id="square1Photo6">
+                    <img class="photos" src="mainPagePhotos/10.jpg">
+                </div>
+                <div class="square1Photos" id="square1Photo7">
+                    <img class="photos"src="mainPagePhotos/11.jpg">
+                </div>
+                <div class="square1Photos" id="square1Photo8">
+                    <img class="photos" src="mainPagePhotos/12.jpg">
+                </div>
+            </div>
+            <div class="albums" id="thirdAlbum" style="display:none">
+                <div class="albumText" id="album3Text">
+                    <h3>Album3</h3>
+                </div>
+                <div class="square1Photos" id="square1Photo9">
+                    <img class="photos" src="mainPagePhotos/13.jpg">
+                </div>
+                <div class="square1Photos" id="square1Photo10">
+                    <img class="photos" src="mainPagePhotos/14.jpg">
+                </div>
+                <div class="square1Photos" id="square1Photo11">
+                    <img class="photos"src="mainPagePhotos/15.jpg">
+                </div>
+                <div class="square1Photos" id="square1Photo12">
+                    <img class="photos" src="mainPagePhotos/16.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="square" id="square2">
+            <div class="squareText" id="squareText1">
+                <h2>Latest Photos</h2> 
+            </div>
+            <div class="square2Photos" id="square2Photo1" style="display: grid">
+                <img class="photos" src="mainPagePhotos/5.jpg">
+            </div>
+            <div class="square2Photos" id="square2Photo2" style="display:none">
+                <img class="photos" src="mainPagePhotos/6.jpg">
+            </div>
+            <div class="square2Photos" id="square2Photo3" style="display:none">
+                <img class="photos" src="mainPagePhotos/7.jpg">
+            </div>
+            <div class="square2Photos" id="square2Photo4" style="display:none">
+                <img class="photos" src="mainPagePhotos/8.jpg">
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <audio controls autoplay loop>
+            <source src="Music/35-Queen - The Show Must Go On.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>   
+    </footer>
+    <script>
+        var slideIndex = 1;
+        var n=slideIndex;
+        var run= setInterval(albumTimer,1000);
+        var run1= setInterval(photoTimer,1000);
+        var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        dotsBackground(slideIndex=n);
+        }
+
+        function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("news");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace("active", "");
+
+        }
+        slides[slideIndex-1].style.display = "block";  
+        }
+        function dotsBackground(n){
+            var slides = document.getElementsByClassName("news");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+                }    
+            if (n < 1) {
+                slideIndex = slides.length
+                }
+            for (i = 0; i < slides.length; i++) {
+                dots[i].style.backgroundColor = "#ffffff";  
+            }
+            dots[slideIndex-1].style.backgroundColor="red";
+        }
+
+        function albumTimer(){
+            var album1=document.getElementById("firstAlbum");
+            var album2=document.getElementById("secondAlbum");
+            var album3=document.getElementById("thirdAlbum");
+            if(album1.style.display=="grid" && album2.style.display=="none" && album3.style.display=="none"){
+                album2.style.display="grid";
+                album1.style.display="none";
+            }
+            else if(album2.style.display=="grid" && album1.style.display=="none" && album3.style.display=="none"){
+                album3.style.display="grid";
+                album2.style.display="none";
+            }
+            else if(album3.style.display=="grid" && album1.style.display=="none" && album2.style.display=="none"){
+                album1.style.display="grid";
+                album3.style.display="none";
+            }
+        }
+        function photoTimer(){
+            var photo1=document.getElementById("square2Photo1");
+            var photo2=document.getElementById("square2Photo2");
+            var photo3=document.getElementById("square2Photo3");
+            var photo4=document.getElementById("square2Photo4");
+            if(photo1.style.display=="grid" && photo2.style.display=="none" && photo3.style.display=="none" && photo4.style.display=="none"){
+                photo2.style.display="grid";
+                photo1.style.display="none";
+            }
+            else if(photo2.style.display=="grid" && photo1.style.display=="none" && photo3.style.display=="none" && photo4.style.display=="none"){
+                photo3.style.display="grid";
+                photo2.style.display="none";
+            }
+            else if(photo3.style.display=="grid" && photo2.style.display=="none" && photo1.style.display=="none" && photo4.style.display=="none"){
+                photo4.style.display="grid";
+                photo3.style.display="none";
+            }
+            else if(photo4.style.display=="grid" && photo1.style.display=="none" && photo3.style.display=="none" && photo2.style.display=="none"){
+                photo1.style.display="grid";
+                photo4.style.display="none";
+            }
+        }
+        function showMenuMobile() {
+            var x = document.getElementById("sidenav");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+        function myFunction(x) {
+            x.classList.toggle("change");
+        }
+    </script>
+        
+</body>
+</html>

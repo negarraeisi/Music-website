@@ -1,0 +1,160 @@
+body{
+    margin: 7px;
+}
+.nav{
+    height: 35%;
+}
+
+li{
+    display:inline;
+    width: 35vh;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: myFont;
+}
+
+ul{
+    list-style: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav{
+    width: 99.8%;
+    display: block;
+    position: relative;
+    background: #3D0000;
+    z-index: 1;
+    margin-left: auto;
+    margin-right: auto;
+    top: 7vh;
+
+}
+
+.background{
+    background-image: url("../mainPagephotos/Untitled-1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:100% 100% ;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: 100%;
+    height: 20vh;
+    position: absolute;
+    z-index: -2;
+}
+
+header{
+    height: 20vh;
+    position: relative; 
+    top: 0;
+    left:0;
+    background-color: #3D0000;
+    width: 100%;
+    font-family: MyFont;  
+    border: 3px solid #000000; 
+    z-index: 1;
+    align-self: center;
+}
+
+#nav {
+    list-style: none inside;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: font2;
+}
+
+#nav li {
+    display: inline-block;
+    position: relative;
+    background: #3D0000;
+    z-index: 1;
+    font-family: font2;
+}
+
+@font-face {
+    font-family: font2;
+    src: url(../fonts/LucidaUnicodeCalligraphy.ttf);
+}
+
+#nav li a {
+    display: inline-block;
+    padding: 0;
+    text-decoration: none;
+    width: 100%;
+    line-height: 200%;
+    color: #ffffff;
+    z-index: 1;
+}
+
+
+#nav li:hover {
+    background: #FF0000;
+}
+
+
+#nav ul {
+    position: absolute;
+    padding: 0;
+    left: 0;
+    display: none;
+    z-index: 1;
+
+}
+
+#nav li:hover ul {
+    display: block;
+}
+
+
+main{
+    height: 80vh;
+    margin-top: 4px;
+    margin-bottom: 2px;
+    background-color: #3D0000;
+    font-family: Myfont;
+    border: 2px solid black;
+}
+
+footer{
+    height: 10vh;
+    background-color: #3D0000;
+    border: 2px solid black;
+    font-family: Myfont;
+}
+
+.container-fluid{
+    background-color: #3D0000;   
+    margin-top: 5px; 
+}
+
+
+.card{
+    background-color: #950101;
+}
+
+.list-group-item{
+    background-color: #950101;
+}
+
+
+img{
+    height: 100%;
+}
+
+#cardContainer2{
+    display: none;
+}
+
+#cardContainer3{
+    display: none;
+}
+
+@font-face {
+    font-family: Myfont;
+    src: url(font/JosefinSans-VariableFont_wght.ttf);
+}
